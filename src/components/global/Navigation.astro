@@ -1,0 +1,81 @@
+<section class="bg-white border-b border-[#426B1F]">
+  <div class="w-full mx-auto md:px-12 px-8 max-w-7xl lg:px-16">
+    <div
+      x-data="{ open: false }"
+      class="relative flex flex-col w-full py-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6">
+      <div class="flex flex-row items-center justify-between lg:justify-start">
+        <a href="/" class=" text-black inline-flex items-center gap-3">
+         <!-- <svg class="h-4" viewBox="0 0 78 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z" class="ccustom" fill="#283CFF"></path> <path d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z" class="ccompli1" fill="#5263FF"></path> <path d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z" class="ccompli2" fill="#808CFF"></path> </svg> -->
+         <img src="/image.png" alt="COOPDEPA" class="ccompli1 w-[82px]  h-[82px  ] aspect-auto">
+         <span class="font-bold font-display  text-[#355b19]">COOPDEPA</span>
+        </a>
+        <button
+          @click="open = !open"
+          class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black lg:hidden">
+          <svg
+            class="w-6 h-6"
+            stroke="currentColor"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              :class="{'hidden': open, 'inline-flex':!open }"
+              class="inline-flex"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+            <path
+              :class="{'hidden': !open, 'inline-flex': open }"
+              class="hidden"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg> 
+        </button>
+      </div>
+      <nav
+        :class="{'flex': open, 'hidden': !open}"
+        class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
+        <a
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-[#426B1F] hover:text-lg lg:ml-auto"
+          href="/Formulario">Unetenos</a
+        >
+        <a
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-[#426B1F] hover:text-lg"
+          href="/#pricing">Localidades</a
+        >
+
+        <a
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-[#426B1F] hover:text-lg"
+          href="/faq">
+          Servicios</a
+        >
+        
+        <a
+        class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-[#426B1F] hover:text-lg"
+        href="/faq">
+        Preguntas?</a
+      >
+
+        <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
+          <!-- <a
+            href="/signup"
+            class="block px-4 py-2 mt-2 text-sm font-medium text-black md:mt-0 hover:text-accent-400 focus:outline-none focus:shadow-outline">
+            Sign up
+          </a> -->
+          <a
+            href="/ "
+            class="flex justify-center items-center gap-2 w-28 h-12 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#426B1F] to-[#426B1F] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]">
+             Contacto 
+                  <ion-icon
+                    class=" text-white pl-2"
+                    name="logo-whatsapp"
+                  ></ion-icon>
+               
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>

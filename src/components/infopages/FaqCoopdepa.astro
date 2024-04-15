@@ -1,0 +1,396 @@
+<section>
+  <div
+    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24 scroll-mt-12"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+      <div class="text-center lg:text-left">
+        <div>
+          <p
+            class="text-3xl font-normal tracking-tight text-greenleaf-500 font-display"
+          >
+            Preguntas Frecuentes
+          </p>
+          <p class="text-base mt-4 text-zinc-500">
+            Estamos comprometidos con la excelencia en el servicio y dispuestos a atender tus inquietudes
+          </p>
+        </div>
+      </div>
+      <div
+        x-data="{ activeAccordion: '',setActiveAccordion(id) { this.activeAccordion = (this.activeAccordion == id) ? '' : id } }"
+        class="relative w-full mx-auto font-normal lg:col-span-2"
+      >
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-black"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>¿Cómo puedo pertenecer a su Cooperativa?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500 -rotate-[45deg]"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div x-show="activeAccordion==id" x-collapse="">
+            <div class="p-4 pt-2 text-zinc-500">
+              Hola, gracias por acercarse a nosotros. Para ser parte de CoopAspire solo debe:
+
+              Pasar por una de nuestras oficinas, con su cédula o pasaporte.
+              Abrir una cuenta de ahorros con RD$1,000 pesos ($500.00 para abrir la cuenta + $500.00 en aportaciones). 
+              Debe llevar una carta de trabajo al momento de aperturar la cuenta. 
+              Nota: Si trabaja como independiente debe llevar fotos de su negocio, o facturas de las compras de mercancía que usted realiza para vender. Si recibe remesas puede llevar los recibos del dinero que recibe.
+              
+              Por favor, indíquenos el lugar de su residencia para ubicarle la sucursal más cercana.
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >¿Cómo puedo solicitar un préstamo con ustedes?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+
+              <p class="mb-4">Hola, gracias por acercarse a nosotros. Para solicitar un préstamo, debe hacerse socio de la cooperativa.</p>
+              
+              <span class="mb-3">¿Cómo hacerse socio?</span>
+ 
+              <ul class="mb-1">
+                <li class="mb-3"> - Pasar por una de nuestras oficinas, con su cédula o pasaporte.</li>
+                <li class="mb-3"> - Abrir una cuenta de ahorros con RD$1,000 pesos ($500.00 para abrir la cuenta + $500.00 en aportaciones).</li>
+                <li class="mb-3"> - Debe llevar una carta de trabajo al momento de aperturar la cuenta. </li>
+              </ul>
+ 
+              <p class="mb-3">
+                <strong> Nota: </strong>Si trabaja como independiente debe llevar fotos de su negocio, o facturas de las compras de mercancía que usted realiza para vender. Si recibe remesas puede llevar los recibos del dinero que recibe.
+              </p>
+     
+              <p class="mb-3">
+                Luego de esto debe completar la solicitud correspondiente y uno de nuestros Asesores de Negocios le orientará sobre su situación financiera referente al préstamo. por favor, indíquenos el lugar de su residencia para ubicarle la sucursal más cercana donde le brindarán más detalles.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >¿Qué beneficios me dan?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              <p class="mb-4">Hola, gracias por acercarse a nosotros. Como socio de la cooperativa recibe los siguientes beneficios:</p>
+
+              <ol class="mb-4 list-outside">
+                <li class="mb-4"> - Tasas competitivas para préstamos.</li>
+                <li class="mb-4"> - Alto rendimiento para tus ahorros y depósitos a plazo fijo.</li>
+                <li class="mb-4"> - Recibe parte de las ganancias de la cooperativa al cabo de cada ejercicio fiscal según lo señala la ley.</li>
+                <li class="mb-4"> - Le devolvemos parte de los intereses que usted paga por sus préstamos. Esto es por el uso de los servicios que generan ingresos a la cooperativa. </li>
+                <li class="mb-4"> - Financiamiento de todo tipo electrodomésticos.</li>
+                <li class="mb-4"> - Educación financiera totalmente gratis.</li>
+                <li class="mb-4"> - A través del Departamento de Capacitación, los socios, los colegios y las iglesias acceden a un amplio catálogo de talleres, seminarios y diplomados llevado a cabo a través de nuestro equipo de facilitadores.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >¿Cuáles son los requisitos para tomar un préstamo?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              <p class="mb-4">Hola, gracias por acercarse a nosotros. Para solicitar un préstamo debe cumplir con lo siguiente:</p>
+
+              <ol class="mb-4 list-outside">
+                <li class="mb-4"> - Debe ser Socio/a de la cooperativa.</li>
+                <li class="mb-4"> - 10% ahorrado del monto que usted desea tomar prestado. Ejemplo: si usted desea RD$50,000.00 pesos debe de tener RD$5,000.00 pesos ahorrado o depositarlos en el momento de solicitar el préstamo.</li>
+                <li class="mb-4"> - Ingresos confirmados.</li>
+                <li class="mb-4"> - Debe tener 1 garante </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >¿Cuáles son los requisitos para tomar un préstamo de vehículo?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              <p class="mb-4">Hola, gracias por acercarse a nosotros. Para solicitar un préstamo debe cumplir con lo siguiente:</p>
+
+              <ol class="mb-4 list-outside">
+                <li class="mb-4"> - Debe ser Socio/a de la cooperativa.</li>
+                <li class="mb-4"> - 10% ahorrado del monto que usted desea tomar prestado. Ejemplo: si usted desea RD$50,000.00 pesos debe de tener RD$5,000.00 pesos ahorrado o depositarlos en el momento de solicitar el préstamo.</li>
+                <li class="mb-4"> - Ingresos confirmados.</li>
+                <li class="mb-4"> - Debe tener 1 garante </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>¿Cuáles son los requisitos para tomar un préstamo de Hipotecario?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              <p class="mb-4">Hola, gracias por acercarse a nosotros. Para solicitar un préstamo debe cumplir con lo siguiente:</p>
+
+              <ol class="mb-4 list-outside">
+                <li class="mb-4"> - Debe ser Socio/a de la cooperativa.</li>
+                <li class="mb-4"> - 20% ahorrado del monto que usted desea tomar prestado. Ejemplo: si usted desea RD$50,000.00 pesos debe de tener RD$5,000.00 pesos ahorrado o depositarlos en el momento de solicitar el préstamo.</li>
+                <li class="mb-4"> - Ingresos confirmados.</li>
+                <li class="mb-4"> - Debe tener 1 garante </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span
+              >¿Correo para enviar CV?</span
+            >
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Hola. Gracias por tu interés en querer formar parte de esta gran familia, puedes enviarnos tu Cv a través de la siguiente dirección de correo electrónico: reclutamiento@coopdepa.com.do
+            </div>
+          </div>
+        </div>
+        <div
+          x-data="{ id: $id('accordion') }"
+          :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+          class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+        >
+          <button
+            @click="setActiveAccordion(id)"
+            class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+          >
+            <span>¿Dónde están sus sucursales?</span>
+            <svg
+              class="w-5 h-5 duration-300 ease-out text-accent-500"
+              :class="{ '-rotate-[45deg]': activeAccordion==id }"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m6-6H6"></path></svg
+            >
+          </button>
+          <div
+            x-show="activeAccordion==id"
+            x-collapse=""
+            style="display: none;"
+          >
+            <div class="p-4 pt-2 text-zinc-500">
+              Estamos localizados en la Avenida Nicolás de Ovando No. 199
+            </div>
+          </div>
+        </div>
+        <div
+        x-data="{ id: $id('accordion') }"
+        :class="{ 'text-black': activeAccordion==id, 'text-zinc-600 hover:text-greenleaf-400': activeAccordion!=id }"
+        class="cursor-pointer group text-zinc-600 hover:text-accent-500"
+      >
+        <button
+          @click="setActiveAccordion(id)"
+          class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none"
+        >
+          <span>¿En qué horario laboran?</span>
+          <svg
+            class="w-5 h-5 duration-300 ease-out text-accent-500"
+            :class="{ '-rotate-[45deg]': activeAccordion==id }"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v12m6-6H6"></path></svg
+          >
+        </button>
+        <div
+          x-show="activeAccordion==id"
+          x-collapse=""
+          style="display: none;"
+        >
+          <div class="p-4 pt-2 text-zinc-500">
+            Yes, you can export your data from the platform. We offer export
+            features that allow you to download your messages, files, and
+            documents, ensuring you have a local copy for backup or migration
+            purposes. It provides you with greater control and flexibility
+            over your data.
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
